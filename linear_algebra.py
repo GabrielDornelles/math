@@ -40,7 +40,7 @@ class LinearAlgebraOperations:
 
     def contains_p_in_line(self,points: list = None, p : tuple=None) -> bool:
         """
-        Pass a vector *v1*, or a list *points* with two tuples containing your points to build a vector.
+        Pass a list *points* with two tuples containing your points to build a vector.
         Then pass a point *p* to check.
         """
 
