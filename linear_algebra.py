@@ -38,16 +38,17 @@ class LinearAlgebraOperations:
     def angle_between_vectors(self,v1,v2):
         return math.acos((self.dot_product(v1,v2))/(self.module_of_vector(v1)*self.module_of_vector(v2)))*(180/math.pi)
 
-    def contains_p_in_line(self,v1=None,points: list = None, p : tuple=None) -> bool:
+    def contains_p_in_line(self,points: list = None, p : tuple=None) -> bool:
         """
         Pass a vector *v1*, or a list *points* with two tuples containing your points to build a vector.
         Then pass a point *p* to check.
         """
-        if v1 is None:
-            x = points[1][0] - points[0][0]
-            y = points[1][1] - points[0][1]
-            z = points[1][2] - points[0][2]
-            v1 = np.array([x,y,z])
+
+        x = points[1][0] - points[0][0]
+        y = points[1][1] - points[0][1]
+        z = points[1][2] - points[0][2]
+        v1 = np.array([x,y,z])
+
         return ((p[0]-points[0][0])/v1[0])==((p[1]-points[0][1])/v1[1])==((p[2] - points[0][2])/v1[2])
 
 vector_1 = np.array([3,0,0])
@@ -66,5 +67,5 @@ v2 = np.array([2,-4,8])
 abv = vectors.angle_between_vectors(v1,v2)
 print(f"angle between vectors {v1} and {v2}: {abv:.2f}º")
 
-contains = vectors.contains_p_in_line(points=[(1,0,1),(2,3,3)], p=(1,1,1))
+contains = vectors.contains_p_in_line(points=[(1,0,1),(2,3,3)], p=(1,0,1))
 print(contains)
