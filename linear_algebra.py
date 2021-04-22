@@ -1,5 +1,9 @@
 import math
 import numpy as np
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
 
 class LinearAlgebraOperations:
 
@@ -40,7 +44,7 @@ class LinearAlgebraOperations:
 
     def contains_p_in_line(self,points: list = None, p : tuple=None) -> bool:
         """
-        Pass a list *points* with two tuples containing your points to build a vector.
+        Pass a vector *v1*, or a list *points* with two tuples containing your points to build a vector.
         Then pass a point *p* to check.
         """
 
@@ -50,6 +54,19 @@ class LinearAlgebraOperations:
         v1 = np.array([x,y,z])
 
         return ((p[0]-points[0][0])/v1[0])==((p[1]-points[0][1])/v1[1])==((p[2] - points[0][2])/v1[2])
+
+    def plot_3_vectors(self,v1,v2,v3):
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection="3d")
+        O = np.array([0,0,0])
+        ax.quiver(O,O,O,v1,v2,v3)
+        ax.set_xlim([-10,10])
+        ax.set_ylim([-10,10])
+        ax.set_zlim([-10,10])
+        ax.set_xlabel("x")
+        ax.set_ylabel("y")
+        ax.set_zlabel("z")
+        plt.show()
 
 vector_1 = np.array([3,0,0])
 vector_2 = np.array([0,2,0])
@@ -69,3 +86,7 @@ print(f"angle between vectors {v1} and {v2}: {abv:.2f}º")
 
 contains = vectors.contains_p_in_line(points=[(1,0,1),(2,3,3)], p=(1,0,1))
 print(contains)
+
+
+### plotting to see if it works
+vectors.plot_3_vectors(vector_1,vector_2,vectors.cross_product(vector_1,vector_2))
