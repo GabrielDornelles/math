@@ -2,7 +2,7 @@
 Implementing and visualizing what I learn through my Math classes.
 # Linear Algebra
 ## Implemented:
-- Dot procut
+- Dot product
 - Cross Product 
 - Mixed Product
 - Angle between vectors
