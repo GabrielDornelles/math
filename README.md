@@ -17,4 +17,4 @@ Implementing and visualizing what I learn through my Math classes.
 ## 2 vectors and their Cross Product
 ![image](https://user-images.githubusercontent.com/56324869/116501504-4d8bf000-a887-11eb-9fe7-a04bfebf0e2a.png)
 
-TODO: Auto Size for plain equation will look wrong when defining non infinite plans
+TODO: Fix Auto Size for plan equation, it will look wrong when defining non infinite plans
