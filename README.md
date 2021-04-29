@@ -8,7 +8,7 @@ Implementing and visualizing what I learn through my Math classes.
 - Angle between vectors
 - Vectors module
 - Contains p in line (if a point belongs to a line)
-- 3d plot of 3 vectors (like 2 vectores and its cross product, or any 3 vectors)
+- 3d plot of 3 vectors (like 2 vectors and its cross product in the example, or any 3 vectors)
 - Plan equation and 3d plot with its normal vector.
 
 ## Plan Equation defined by 3 points
