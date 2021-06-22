@@ -1,5 +1,7 @@
 # Math
 Implementing and visualizing what I learn through my Math classes.
+
+There's a implementation and intuition in the notebook for backpropagating partial derivatives in neural nets (a.k.a matrix/vector partial derivative).
 # Linear Algebra
 ## Implemented:
 - Dot product
