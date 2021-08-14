@@ -1,5 +1,5 @@
 import math
-# I did learn that a long time ago, implemented for fun
+# I did learn that a long time ago, implemented for fun and demonstrate python to a friend.
 a = int(input("value of a: "))
 b = int(input("value of b: "))
 c = int(input("value of c: "))
