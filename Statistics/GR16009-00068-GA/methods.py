@@ -51,11 +51,12 @@ def check_occurence(data: dict, search_for:str , sub_classes:list):
             x.append(data[search_for][i])
     return x
 
-def histograms(main_key: str, sort_by: str, val_range:tuple=None):
+def histograms(main_key: str, sort_by: str, val_range:tuple=None, _dict:dict=None):
     # plot histograms for the main key sorted by something
     # example: plot histograms of CustoEntrega for each "estado"
     # so main_key = CustoEntrega, sort_by = Estado
     # TODO: val_range can be improved, but I dont know the best way to group values to show best distribuition
+    general_dict = _dict
     figure(figsize=(7,7), dpi=100)
     maoDeObra = sorted([int(x) for x in general_dict[main_key]])
     if val_range is None: 
